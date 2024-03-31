@@ -1,0 +1,3 @@
+incident_id,date,state,city_or_county,address,n_killed,n_injured,incident_url,source_url,incident_url_fields_missing,congressional_district,gun_stolen,gun_type,incident_characteristics,latitude,location_description,longitude,n_guns_involved,notes,participant_age,participant_age_group,participant_gender,participant_name,participant_relationship,participant_status,participant_type,sources,state_house_district,state_senate_district
+1,2013-01-01,Washington,Bothell,house,2,1,a.com,b.com,False,14,True,pistol,"Bad things",21.1,,-15.6,1,a note,0::20,young,male,John,,dead,victim,c.com,5,30
+2,2019-12-08,California,San Francisco,mansion,2,1,a.com,b.com,False,14,True,pistol,"Bad things",21.1,,-15.6,1,a note,0::20,young,male,John,,dead,victim,c.com,5,30
