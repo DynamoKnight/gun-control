@@ -36,7 +36,7 @@ def main():
     data_gdp.to_csv('data_organized/gdp_by_state.csv')
     data_laws.to_csv('data_organized/gun_laws.csv')
     data_violence.to_csv('data_organized/gun_violence_data.csv')
-    data_states.to_file('data_organized/states_behaviors.shp')
+    data_states.to_file('data_organized/shapes/states_behaviors.shp')
     data_all.to_csv('data_organized/state_data_2013-2017.csv')
 
     # Just to confirm the columns
@@ -162,7 +162,7 @@ def test_column_to_row():
     Tests column_to_row
     '''
     test_data = pd.read_csv('raw_data/test_col_to_row.csv')
-    new_data = column_to_row(test_data,'year','GDP','Area')
+    new_data = column_to_row(test_data,'class','grade','name')
     #print(new_data)
 
 def test_clean_gdp():
