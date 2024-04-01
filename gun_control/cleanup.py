@@ -74,7 +74,8 @@ def clean_violence(df):
     Only stores the desired columns
     Combines the time based on the year
 
-    df = a dataframe of gun violence
+    df = a dataframe of gun violence,
+    must be a time series
     '''
     df['n_victims'] = df['n_killed'] + df['n_injured']
     df = df[[
@@ -89,7 +90,7 @@ def clean_violence(df):
     # Victims are summmed based on year and state
     df = df.groupby(['year', 'state']).agg({'n_victims': 'sum'}).reset_index()
     # Only looking at 2013 to 2017
-    df = df.loc[df['year'] != 2018, :]
+    df = df.loc[(df['year'] >= 2013) & (df['year'] <= 2017), :]
     return df
 
 def clean_behaviors(df):
@@ -186,7 +187,7 @@ def test_clean_violence():
     '''
     Tests clean_violence
     '''
-    test_data = pd.read_csv('raw_data/test_violence.csv')
+    test_data = pd.read_csv('raw_data/test_violence.csv',index_col='date',parse_dates=True)
     new_data = clean_violence(test_data)
     #print(new_data)
 
